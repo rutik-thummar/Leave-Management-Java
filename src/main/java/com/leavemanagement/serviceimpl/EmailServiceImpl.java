@@ -41,7 +41,7 @@ public class EmailServiceImpl implements EmailService {
 
 	@Override
 	public void sendMail(EmployeeLeaveDTO employeeLeaveDTO) {
-		String from = "rppatel1503@gmail.com";
+		String from = "xyz@gmail.com";
 		List<User> adminList = getAdmin();
 		String subject = "Leave Application for a "+employeeLeaveDTO.getType()+" Day";
 		String host = "smtp.gmail.com";
@@ -53,7 +53,7 @@ public class EmailServiceImpl implements EmailService {
 		Session session = Session.getInstance(properties, new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(from, "pxgqqqpangwbmaem");
+				return new PasswordAuthentication(from, "password");
 			}
 		});
 		try {
